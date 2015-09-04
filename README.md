@@ -1,12 +1,12 @@
 Data Transmission 2015.2
 
 Members:
-Cristiano Melo
-Dener Miranda
-Francisco de Castro
+- Cristiano Melo
+- Dener Miranda
+- Francisco de Castro
 
 Objective:
-Implements decoders and modulators.
+- Implements decoders and modulators.
 
 Signal encoding techniques:
 - Digital data, digital signals
@@ -16,5 +16,4 @@ Signal encoding techniques:
 
 
 Bibliography:
-Data and Computer Communications
-STALLINGS, William. 8th edition.
+- STALLINGS, W. Data and Computer Communications. 8th edition.
