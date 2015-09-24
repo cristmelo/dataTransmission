@@ -38,4 +38,20 @@ function ans = BIPOLAR_AMI( signal_vector )
     endfor
 endfunction
 
+function ans = MANCHESTER( signal_vector )
+    n = length( signal_vector )
+    j = 0
+    for( k = 1:n )
+      if ( signal_vector(k) == 0 ) 
+          ans(k+j) = 1
+          j++
+          ans(k+j) = 0
+      else
+          ans(k+j) = 0
+          j++
+          ans(k+j) = 1
+      endif
+    endfor
+endfunction
+
 NRZ_L( x )
