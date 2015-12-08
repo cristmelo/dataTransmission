@@ -1,4 +1,4 @@
-function [time, carrier, modulated_signal] = FSK(signal_vector, amplitude, frequency1, frequency2)
+function [time, input_signal, carrier1, carrier2, modulated_signal] = FSK(signal_vector, amplitude, frequency1, frequency2)
     signal_vector_length = length(signal_vector);
 
     time = 0.01:0.01:signal_vector_length;
@@ -17,33 +17,4 @@ function [time, carrier, modulated_signal] = FSK(signal_vector, amplitude, frequ
         modulated_signal(i) = carrier2(i); 
       endif
     endfor 
-    
-    %TODO Mover esses plots pro python
-    subplot(4,1,1);
-    plot(time, input_signal, 'LineWidth',2,'MarkerFaceColor','c');
-    xlabel('time');
-    ylabel('amplitude');
-    title('digital input signal');
-
-    subplot(4,1,2);
-    plot(time, carrier1, 'LineWidth',2,'MarkerFaceColor','c');
-    xlabel('time');
-    ylabel('amplitude');
-    title('sinusoidal signal');
-    
-    subplot(4,1,3);
-    plot(time, carrier2, 'LineWidth',2,'MarkerFaceColor','c');
-    xlabel('time');
-    ylabel('amplitude');
-    title('sinusoidal signal');
-
-    subplot(4,1,4);
-    plot(time, modulated_signal, 'LineWidth',2,'MarkerFaceColor','c');
-    xlabel('time');
-    ylabel('amplitude');
 endfunction
-
-%Digite no terminal
-
-%signal_vector = [0 0 1 1 0 1 0 0 0 1 0];
-%FSK(signal_vector, 1, 4, 2);
