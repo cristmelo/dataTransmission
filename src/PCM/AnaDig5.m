@@ -8,7 +8,10 @@ function AnaDig5
 	plot(resp);
 	
 	for i = 1:intervalo
-		resp2(i)=round(15.5+15.5*(resp(round( i*(intervalo*10)/(intervalo) - (((intervalo*10)/intervalo)/2)) )/A));
+		temp1 = i*10; 
+	      temp2=(resp(round( temp1 )) );
+	      temp3 = temp2/A;
+	      resp2(i)=round(15.5+15.5*temp3);
 	endfor
   	
   subplot(2,1,1);
