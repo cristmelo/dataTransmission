@@ -4,7 +4,7 @@ function AnaDig5
   A = 2;
   t = 0:1/intervalo:10;
 
-  resp=wavread('teste2.wav');
+  resp=wavread('Media-Convert_test5_PCM_Stereo_VBR_8SS_44100Hz.wav');
 	plot(resp);
 	
 	for i = 1:intervalo
